@@ -20,28 +20,36 @@
     font-style: normal;
 }
 
+body, html {
+    height: 100vh;
+}
 
 body {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 90vh;
+    position: relative;
 }
 
 
 /* Header */
 header {
     width: 100%;
+    height: 10vh;
+    margin: 0;
+    /* border: 1px solid grey; */
 }
 
 header p {
+    margin: 0;
+    width: auto;
     padding-top: 20px;
-    margin-left: 77px;
+    padding-left: 77px;
     font-family: 'Inconsolata';
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -8%;
     color: #333333;
+    /* border: 1px solid orange; */
 }
 
 /* Le corps de la page */
@@ -49,11 +57,11 @@ header p {
 .container {
     display: flex;
     width: 100%;
-    margin-top: 110px;
+    height: 70vh;
+    padding-top: 4%;
     justify-content: center;
     align-items: flex-start;
-    height: calc(90vh - 150px);
-    /* border: 2px solid red; */
+    /* border: 1px solid red; */
 }
 
 
@@ -63,13 +71,13 @@ header p {
     width: 50%;
     display: flex;
     align-items: flex-start;
-    /* border: 2px solid violet; */
+    /* border: 1px solid violet; */
 }
 
 .container .image img {
     margin-left: 77px;
     width: 640px;
-    /* border: 1.5px solid black; */
+    /* border: 1px solid black; */
 }
 
 
@@ -82,7 +90,7 @@ header p {
     flex-direction: column;
     justify-content: left;
     margin-left: 40px;
-    /* border: 2px solid violet; */
+    /* border: 1px solid violet; */
 }
 
         /* Le titre */
@@ -93,7 +101,7 @@ header p {
     font-size: 64px;
     color: #333333;
     height: 190px;
-    /* border: 2px solid black; */
+    /* border: 1px solid black; */
 }
 
         /* Le texte */
@@ -124,9 +132,16 @@ header p {
     line-height: 68px;
 }
 
-
-
 /* Footer */
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    height: 2vh;
+}
 
 footer p {
     text-align: center;
@@ -134,8 +149,8 @@ footer p {
     font-size: 16px;
     font-weight: 600;
     color: #333333;
+    padding: 0;
     margin: 0;
-    padding-top: 25px;
 }
 
 footer a {
@@ -145,4 +160,125 @@ footer a {
 footer a:visited {
     color: #333333;
     text-decoration: none;
+}
+
+
+
+/* Media Queries */
+@media all and (max-device-width: 1280px) {
+    header {
+        height: 6vh;
+        border: 1px solid grey;
+    }
+
+    header p {
+        padding-left: 24px;
+        width: 100%;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: max-content;
+        border: 1px solid red;
+    }
+    
+        /* L'épouvantail */
+    .container .image {
+        height: 26.5vh;
+        width: 100%;
+        margin: 5vh 0 0 0 ;
+        padding: 0;
+        justify-content: center;
+        border: 1px solid violet;
+    }
+
+    
+    .container .image img {
+        height: 230px;
+        width: 285px;
+        margin-left: 0;
+        border: 1px solid black;
+    }
+    
+        /* La colonne de "droite" */
+    .container .colDroite {
+        justify-content: space-between;
+        width: max-content;
+        height: 40vh;
+        margin-left: 24px;
+        margin-top: 5vh;
+        border: 1px solid violet;
+    }
+    
+    .container .colDroite .titre {
+        height: auto;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 48px;
+        border: 1px solid black;
+    }
+
+    .container .colDroite .texte {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .container .colDroite .divBoutonHomePage {
+       margin: 0;
+       padding: 0;
+    }
+
+    footer {
+        height: 2vh;
+    }
+}
+
+
+@media all and (max-device-width: 992px) {
+    .container .colDroite {
+        margin-left: 23px;
+        margin-top: 4vh;
+        height: 45vh;
+    }
+
+    
+    .container .image {
+        margin: 4vh 0 0 0;
+    }   
+}
+
+
+@media all and (max-device-width: 768px) {
+    .container .colDroite {
+        margin-top: 3vh;
+        width: max-content;
+        height: 35vh;
+    }
+
+    .container .colDroite .titre {
+        font-size: 38px;
+    }
+
+    .container .colDroite .texte {
+        font-size: 15px;
+    }
+
+    .container .image {
+        margin: 3vh 0 0 0;
+    }  
+}
+
+@media all and (max-device-width: 428px) {
+    .container .colDroite {
+        height: 40vh;
+        width: max-content;
+    }
 }
