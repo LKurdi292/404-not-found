@@ -165,7 +165,7 @@ footer a:visited {
 
 
 /* Media Queries */
-@media all and (max-device-width: 1280px) {
+@media all and (max-width: 1280px) {
     header {
         height: 6vh;
         /* border: 1px solid grey; */
@@ -242,7 +242,7 @@ footer a:visited {
 }
 
 
-@media all and (max-device-width: 992px) {
+@media all and (max-width: 1050px) {
     .container .colDroite {
         margin-left: 23px;
         margin-top: 4vh;
@@ -256,7 +256,7 @@ footer a:visited {
 }
 
 
-@media all and (max-device-width: 768px) {
+@media all and (max-width: 768px) {
     .container .colDroite {
         margin-top: 3vh;
         width: max-content;
@@ -276,7 +276,7 @@ footer a:visited {
     }  
 }
 
-@media all and (max-device-width: 428px) {
+@media all and (max-width: 428px) {
     .container .colDroite {
         height: 40vh;
         width: max-content;
